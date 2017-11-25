@@ -1,0 +1,16 @@
+PODS:
+  - ZJDKit (0.1.0)
+
+DEPENDENCIES:
+  - ZJDKit (from `../`)
+
+EXTERNAL SOURCES:
+  ZJDKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZJDKit: 2bf97ca6b530b41554e779605ae5067cdb2a6bce
+
+PODFILE CHECKSUM: e7e5bf9f74ac88d2bb2edd38c4a1d86bac799135
+
+COCOAPODS: 1.2.1

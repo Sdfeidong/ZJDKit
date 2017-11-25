@@ -1,0 +1,6 @@
+framework module ZJDKit {
+  umbrella header "ZJDKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

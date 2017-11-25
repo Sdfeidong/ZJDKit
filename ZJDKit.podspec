@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ZJDKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ZJDKit.'
+  s.summary          = '代码积累'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+个人代码库整理.
                        DESC
 
   s.homepage         = 'https://github.com/Sdfeidong/ZJDKit'
@@ -37,6 +37,19 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.frameworks = 'UIKit', 'SystemConfiguration', 'Foundation'
+
+  s.dependency 'AFNetworking'
+  s.dependency 'Reachability'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'BlocksKit'
+  s.dependency 'SDWebImage'
+  s.dependency 'YYKit'
+  s.dependency 'MJRefresh'
+  s.dependency 'MJExtension'
+  s.dependency 'DZNEmptyDataSet'
+  s.dependency 'AvoidCrash'
+  s.dependency 'BAButton'
+
 end
