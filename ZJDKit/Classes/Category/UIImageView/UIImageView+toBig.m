@@ -9,6 +9,7 @@
 #import "UIImageView+toBig.h"
 #import <objc/runtime.h>
 #import "ZJD_Header.h"
+#import "YYKit.h"
 
 @interface UIImageView ()<UIScrollViewDelegate>
 

@@ -8,6 +8,8 @@
 
 #import "ZJDLaunchAd.h"
 #import "ZJD_Header.h"
+#import "SDWebImageManager.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 NSString *const TIMER_SENDER = @"5";
 
