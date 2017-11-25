@@ -193,11 +193,13 @@ static const CGFloat CELL_SEPARATOR_LINE_HEIGHT = 0.6f;
 #endif
 
 // 重写NSLog,Debug模式下打印日志和当前行数
-#if DEBUG
+/** BAButton重复定义
+#ifdef DEBUG
 #define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(FORMAT, ...) nil
 #endif
+ */
 
 // DEBUG  模式下打印日志,当前行 并弹出一个警告
 #ifdef DEBUG
@@ -323,8 +325,8 @@ description:__VA_ARGS__];\
 
 // MainScreen Height&Width
 #define kMScreen_Bounds     [UIScreen mainScreen].bounds
-#define kMScreen_W          [ToolClass fixedScreenBounds].size.width
-#define kMScreen_H          [ToolClass fixedScreenBounds].size.height
+#define kMScreen_W          kMScreen_Bounds.size.width
+#define kMScreen_H          kMScreen_Bounds.size.height
 
 // 屏幕尺寸的宽高与scale的乘积就是相应的分辨率值
 #define kMScreen_Scale       [UIScreen mainScreen].scale

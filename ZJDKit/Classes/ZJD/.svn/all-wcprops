@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/uniqueExamination/!svn/ver/42/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD
+END
+ZJD_TapImageView.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TapImageView.h
+END
+ZJD_TableView.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TableView.h
+END
+TopMenuImageView.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/TopMenuImageView.m
+END
+UIButton+CountDown.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/UIButton+CountDown.m
+END
+ZJD_TapLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TapLabel.h
+END
+ZJD_PopoverView.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_PopoverView.h
+END
+ZJD_TapImageView.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TapImageView.m
+END
+ZJD_TableView.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TableView.m
+END
+ZJD_FileManageUnit.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_FileManageUnit.h
+END
+ZJD_TapLabel.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_TapLabel.m
+END
+ZJD_PopoverView.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_PopoverView.m
+END
+ZJD_MultiTextView.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_MultiTextView.h
+END
+ZJD_StarEvaluateView.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_StarEvaluateView.h
+END
+ZJD_DottedLine.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_DottedLine.h
+END
+TouchPropagatedScrollView.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/TouchPropagatedScrollView.h
+END
+ZJD_FileManageUnit.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_FileManageUnit.m
+END
+ZJD_MultiTextView.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_MultiTextView.m
+END
+ZJD_DottedLine.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_DottedLine.m
+END
+ZJD_StarEvaluateView.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_StarEvaluateView.m
+END
+TouchPropagatedScrollView.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/TouchPropagatedScrollView.m
+END
+ZJD_LongPressGestureRecognizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_LongPressGestureRecognizer.h
+END
+ZJD_CountTime.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_CountTime.h
+END
+ZJD_LongPressGestureRecognizer.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_LongPressGestureRecognizer.m
+END
+ZJD_Button.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_Button.h
+END
+PlaceholderTextView.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/PlaceholderTextView.h
+END
+ZJD_CountTime.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_CountTime.m
+END
+UIButton+CountDown.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/UIButton+CountDown.h
+END
+TopMenuImageView.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/TopMenuImageView.h
+END
+ZJD_Button.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/ZJD_Button.m
+END
+PlaceholderTextView.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/uniqueExamination/!svn/ver/25/trunk/iOS/GKCC/GKCC/3rd/ZJDCode/ZJD/PlaceholderTextView.m
+END

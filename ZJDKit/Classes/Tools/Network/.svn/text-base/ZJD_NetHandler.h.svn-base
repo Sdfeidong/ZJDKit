@@ -1,0 +1,163 @@
+//
+//  ZJD_NetHandler.h
+//  ZJDKit
+//
+//  Created by yyk100 on 16/9/6.
+//  Copyright © 2016年 aidong. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+//
+// http://192.168.2.214:8080 rouxin
+
+
+
+// 一个接口由三部分组成 (IP + 中间桥接 + API)
+// 服务器IP
+#define YYK_SEVERIP          @"http://192.168.2.214:8080"
+#define YYK_SEVERIP2         @"http://192.168.2.2:8080"
+
+// 接口中间桥接部分
+#define YYK_HEADER_API       @"/writeapp/api/"
+
+// API地址
+// http://192.168.1.125:8080/unique2/api/
+#define YYK_SEVERIP_API      [YYK_SEVERIP stringByAppendingString:YYK_HEADER_API]
+#define YYK_SEVERIP_API2     [YYK_SEVERIP2 stringByAppendingString:YYK_HEADER_API]
+
+// AppStore 审核期时间
+#define API_SHOW_TIME                  @"showTime"
+
+@interface ZJD_NetHandler : NSObject
+
+/**
+ *  登录
+ */
+- (void)loginWithAccountName:(NSString *)accountName
+                    password:(NSString *)password
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  登出
+ */
+- (void)logoutWithAccountName:(NSString *)accountName
+                     password:(NSString *)password
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  注册
+ */
+- (void)registerWithAccountName:(NSString *)accountName
+                       password:(NSString *)password
+                      otherDict:(NSDictionary *)otherDict
+                        showHUD:(BOOL)showHUD
+                     faileAlert:(BOOL)faileAlert
+                        success:(ZJD_HandlerSuccess)success
+                           fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  首页视频
+ */
+- (void)indexAllVideoWithPage:(NSString *)page
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  视频下所有评论
+ */
+- (void)allCommentWithVideoId:(NSString *)videoId
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  视频上传 // video(视频) picture(封面)
+ *  videoId 空表示新上传视频/否则表示修改视频
+ *  commentAllow(可以评论1,不可以评论0)
+ */
+- (void)videoUploadWithUserId:(NSString *)userId
+                      videoId:(NSString *)videoId
+                videoFileName:(NSString *)videoFileName
+                  pictureName:(NSString *)pictureName
+                    introduce:(NSString *)introduce
+                 commentAllow:(NSString *)commentAllow
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  删除视频
+ */
+- (void)deleteVideoWithVideoId:(NSString *)videoId
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  个人上传视频列表
+ */
+- (void)listsVideoWithUserId:(NSString *)userId
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  视频点赞
+ *  flag 1点赞/-1
+ */
+- (void)likesVideoWithUserId:(NSString *)userId
+                     videoId:(NSString *)videoId
+                        flag:(NSString *)flag
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  视频评论
+ */
+- (void)commentVideoWithUserId:(NSString *)userId
+                       videoId:(NSString *)videoId
+                       content:(NSString *)content
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail;
+
+/**
+ *  评论点赞
+ *  flag 1点赞/-1
+ */
+- (void)likesCommentWithUserId:(NSString *)userId
+                     commentId:(NSString *)commentId
+                          flag:(NSString *)flag
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail;
+
+
+@end

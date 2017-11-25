@@ -1,0 +1,185 @@
+//
+//  RegularValidate.m
+//  YYKSearch
+//
+//  Created by yyk100 on 16/9/27.
+//  Copyright © 2016年 aidong. All rights reserved.
+//
+
+#import "RegularValidate.h"
+
+// 只能为中文
+// NSString *regex = @"[\u4e00-\u9fa5]+";
+
+// 只能为数字
+// NSString *regex = @"[0-9]*";
+
+// 只能为小写
+// NSString *regex = @"[a-z]*";
+
+// 只能为大写
+// NSString *regex = @"[A-Z]*";
+
+// 允许大小写
+// NSString *regex = @"[a-zA-Z]*";
+
+// 允许含大小写或数字(不限字数)
+// NSString *regex = @"[a-zA-Z0-9]*";
+
+// 允许含大小写或数字(限字数)
+// NSString *regex = @"^[A-Za-z0-9]{6,20}+$";
+
+// 允许汉字或数字(不限字数)
+// NSString *regex = @"[\u4e00-\u9fa5]+[0-9]*";
+
+// 允许汉字或数字(限字数)
+// NSString *regex = @"[\u4e00-\u9fa5][0-9]{6,20}+$";
+
+// 允许汉字，大小写或数字(不限字数)
+// NSString *regex = @"[\u4e00-\u9fa5]+[A-Za-z0-9]*";
+
+// 允许汉字，大小写或数字(限字数)
+// NSString *regex = @"[\u4e00-\u9fa5]+[A-Za-z0-9]{6,20}+$";
+
+
+// 只能为数字
+#define REG_NUMBER              @"[0-9]*"
+
+// 邮箱的正则表达式
+#define REG_EMAIL               @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+
+//用户名的正则表达式   中英文、数字、下划线，至少2个字符,至多20
+#define REG_NAME                @"^[\\w\\u4e00-\\u9fa5]{2,20}$"
+
+// [0-9 | A-Z | a-z]{6,16}
+//密码的正则表达式   以字母开头，长度在6~18之间，只包含英文、数字和下划线
+//#define REG_PASSWORD            @"^[a-zA-Z]\\w{5,17}$"
+#define REG_PASSWORD            @"[0-9|A-Z|a-z]{6,16}"
+
+
+//预注册用户密码正则表达式  以M开头＋身份证后6位数
+#define REG_PREREGISTERPASSWORD @"^[M]\\w{6}$"
+
+//手机号的正则表达式
+#define REG_PHONE               @"^1[35678][\\d]{9}$"
+
+//邮编的正则表达式
+#define REG_POSTCODE            @"^[\\d]{6}$"
+
+//图片格式验证
+#define REG_PICTURESTYLE        @"/.+(\\.jpg|\\.jpeg|\\.gif|\\ .png)$/i"
+
+//验证中文
+#define REG_CHINESE             @"[^\u4e00-\u9fa5]"
+
+//字母和数字
+#define REG_CHARSNUM            @"^[0-9a-z]+$/i"
+
+//社保卡
+#define REG_SOCIALCARDS         @"^[A-Za-z0-9]{0,30}$/i"
+
+//身份证号
+#define REG_IDCARD              @"^(\\d{15}$|^\\d{18}$|^\\d{17}(\\d|X|x))$"
+
+
+@implementation RegularValidate
+
+/**
+ *  用于验证输入框的内容
+ *
+ *  @param regText   需要检测的正则表达式
+ *  @param candidate 需要检测的字符串
+ *
+ *  @return 返回的是否为真
+ */
++ (BOOL)validate:(NSString *)regText withCandidate:(NSString *)candidate{
+    
+    NSPredicate *predicateText = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regText];
+    
+    return [predicateText evaluateWithObject:candidate];
+    
+}
+
++ (BOOL)validateNumber:(NSString *)candidate {
+    
+    return [self validate:REG_NUMBER withCandidate:candidate];
+}
+
+//验证邮箱
++ (BOOL)validateEmail:(NSString *)candidate{
+    
+    return [self validate:REG_EMAIL withCandidate:candidate];
+    
+}
+
+//验证姓名
++ (BOOL)validateName:(NSString *)candidate{
+    
+    return [self validate:REG_NAME withCandidate:candidate];
+    
+}
+
+//手机号
++ (BOOL)validatePhone:(NSString *)candidate{
+    
+    return [self validate:REG_PHONE withCandidate:candidate];
+    
+}
+
+//密码
++ (BOOL)validatePassword:(NSString *)candidate{
+    
+    return [self validate:REG_PASSWORD withCandidate:candidate];
+    
+}
+
+//预注册密码
++ (BOOL)validatePrePassword:(NSString *)candidate{
+    
+    return [self validate:REG_PREREGISTERPASSWORD withCandidate:candidate];
+    
+}
+
+//邮编
++ (BOOL)validatePostCode:(NSString *)candidate{
+    
+    return [self validate:REG_POSTCODE withCandidate:candidate];
+    
+}
+
+//图片格式
++ (BOOL)validatePictureType:(NSString *)candidate{
+    
+    return [self validate:REG_PICTURESTYLE withCandidate:candidate];
+    
+}
+
+//中文
++ (BOOL)validateChinese:(NSString *)candidate{
+    
+    return [self validate:REG_CHINESE withCandidate:candidate];
+    
+}
+
+//字母和数字
++ (BOOL)validateCharNum:(NSString *)candidate{
+    
+    return [self validate:REG_CHARSNUM withCandidate:candidate];
+    
+}
+
+//社保卡号
++ (BOOL)validateSocialCard:(NSString *)candidate{
+    
+    return [self validate:REG_SOCIALCARDS withCandidate:candidate];
+    
+}
+
+//身份证号
++ (BOOL)validateIDCard:(NSString *)candidate{
+    
+    return [self validate:REG_IDCARD withCandidate:candidate];
+    
+}
+
+@end

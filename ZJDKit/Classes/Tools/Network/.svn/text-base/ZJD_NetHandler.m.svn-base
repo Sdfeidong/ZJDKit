@@ -1,0 +1,350 @@
+//  ZJD_NetHandler.m
+//  ZJDKit
+//
+//  Created by yyk100 on 16/9/6.
+//  Copyright © 2016年 aidong. All rights reserved.
+//
+
+#import "ZJD_NetHandler.h"
+#import "ZJD_Networking.h"
+
+#import "AFNetworking.h"
+
+
+@implementation ZJD_NetHandler
+
+/**
+ *  登录
+ */
+- (void)loginWithAccountName:(NSString *)accountName
+                    password:(NSString *)password
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(accountName)) {
+        [passDict setObject:accountName forKey:@"accountName"];
+    }
+    if (kStringIsNotEmpty(password)) {
+        [passDict setObject:[password md5String] forKey:@"password"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"user/userLogin"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  登出
+ */
+- (void)logoutWithAccountName:(NSString *)accountName
+                     password:(NSString *)password
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail {
+    
+    
+}
+
+- (void)registerWithAccountName:(NSString *)accountName
+                       password:(NSString *)password
+                      otherDict:(NSDictionary *)otherDict
+                        showHUD:(BOOL)showHUD
+                     faileAlert:(BOOL)faileAlert
+                        success:(ZJD_HandlerSuccess)success
+                           fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(accountName)) {
+        [passDict setObject:accountName forKey:@"accountName"];
+    }
+    if (kStringIsNotEmpty(password)) {
+        [passDict setObject:[password md5String] forKey:@"password"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"user/userRegister"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  首页视频
+ */
+- (void)indexAllVideoWithPage:(NSString *)page
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(page)) {
+        [passDict setObject:page forKey:@"page"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"video/allvideo"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  视频下所有评论
+ */
+- (void)allCommentWithVideoId:(NSString *)videoId
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(videoId)) {
+        [passDict setObject:videoId forKey:@"videoId"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"comment/allComment"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  视频上传 // video(视频) picture(封面)
+ *  videoId 空表示新上传视频/否则表示修改视频
+ *  commentAllow(可以评论1,不可以评论0)
+ */
+- (void)videoUploadWithUserId:(NSString *)userId
+                      videoId:(NSString *)videoId
+                videoFileName:(NSString *)videoFileName
+                  pictureName:(NSString *)pictureName
+                    introduce:(NSString *)introduce
+                 commentAllow:(NSString *)commentAllow
+                    otherDict:(NSDictionary *)otherDict
+                      showHUD:(BOOL)showHUD
+                   faileAlert:(BOOL)faileAlert
+                      success:(ZJD_HandlerSuccess)success
+                         fail:(ZJD_HandlerFail)fail {
+    
+}
+
+/**
+ *  删除视频
+ */
+- (void)deleteVideoWithVideoId:(NSString *)videoId
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(videoId)) {
+        [passDict setObject:videoId forKey:@"videoId"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"video/delete"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  个人上传视频列表
+ */
+- (void)listsVideoWithUserId:(NSString *)userId
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(userId)) {
+        [passDict setObject:userId forKey:@"userId"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"video/findVideos"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  个人上传视频列表
+ *  flag 1点赞/-1
+ */
+- (void)likesVideoWithUserId:(NSString *)userId
+                     videoId:(NSString *)videoId
+                        flag:(NSString *)flag
+                   otherDict:(NSDictionary *)otherDict
+                     showHUD:(BOOL)showHUD
+                  faileAlert:(BOOL)faileAlert
+                     success:(ZJD_HandlerSuccess)success
+                        fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(userId)) {
+        [passDict setObject:userId forKey:@"userId"];
+    }
+    if (kStringIsNotEmpty(videoId)) {
+        [passDict setObject:videoId forKey:@"videoId"];
+    }
+    if (kStringIsNotEmpty(flag)) {
+        [passDict setObject:flag forKey:@"flag"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"video/likes"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  视频评论
+ */
+- (void)commentVideoWithUserId:(NSString *)userId
+                       videoId:(NSString *)videoId
+                       content:(NSString *)content
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(userId)) {
+        [passDict setObject:userId forKey:@"userId"];
+    }
+    if (kStringIsNotEmpty(videoId)) {
+        [passDict setObject:videoId forKey:@"videoId"];
+    }
+    if (kStringIsNotEmpty(content)) {
+        [passDict setObject:content forKey:@"content"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"comment/save"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+/**
+ *  评论点赞
+ *  flag 1点赞/-1
+ */
+- (void)likesCommentWithUserId:(NSString *)userId
+                     commentId:(NSString *)commentId
+                          flag:(NSString *)flag
+                     otherDict:(NSDictionary *)otherDict
+                       showHUD:(BOOL)showHUD
+                    faileAlert:(BOOL)faileAlert
+                       success:(ZJD_HandlerSuccess)success
+                          fail:(ZJD_HandlerFail)fail {
+    
+    // 设置参数
+    NSMutableDictionary *passDict = (otherDict) ? [otherDict mutableCopy] : [NSMutableDictionary new];
+    
+    if (kStringIsNotEmpty(userId)) {
+        [passDict setObject:userId forKey:@"userId"];
+    }
+    if (kStringIsNotEmpty(commentId)) {
+        [passDict setObject:commentId forKey:@"commentId"];
+    }
+    if (kStringIsNotEmpty(flag)) {
+        [passDict setObject:flag forKey:@"flag"];
+    }
+    
+    NSString *url = [YYK_SEVERIP_API2 stringByAppendingString:@"comment/updateComment"];
+    
+    [ZJD_Networking baseWithUrl:url params:passDict cacheTime:0 requestType:ZJD_RequestTypePost success:^(id results){
+        
+        success(results);
+        
+    } fail:^(NSError *error){
+        
+        fail(error);
+        
+    } showHUD:showHUD faileAlert:faileAlert];
+}
+
+@end

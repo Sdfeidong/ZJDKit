@@ -6,7 +6,7 @@
 //  Copyright (c) 2017 Sdfeidong. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 #import "ZJDAppDelegate.h"
 
 int main(int argc, char * argv[])

@@ -1,0 +1,113 @@
+//
+//  ZJD_TapImageView.m
+//  V6
+//
+//  Created by aidong on 15/8/18.
+//  Copyright (c) 2015年 aidong. All rights reserved.
+//
+
+#import "ZJD_TapImageView.h"
+#import "YYKit.h"
+
+@implementation ZJD_TapImageView
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        
+        CGFloat TagIV_Width = 17.f * Scale_WithiPhone6;
+        CGFloat TagIV_Padding = 5.f * Scale_WithiPhone6;
+        CGFloat TagIV_BianJu = 0.5f;
+        // 右侧标记image
+        self.tagIV = [[UIImageView alloc] initWithFrame:CGRectMake(self.width - TagIV_Width - TagIV_BianJu, TagIV_BianJu, TagIV_Width, TagIV_Width)];
+        [self addSubview:self.tagIV];
+        self.tagIV.userInteractionEnabled = YES;
+        
+        
+        self.tagIV2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.tagIV.left, self.tagIV.bottom + TagIV_Padding, TagIV_Width, TagIV_Width)];
+        [self addSubview:self.tagIV2];
+        self.tagIV2.userInteractionEnabled = YES;
+        
+        self.tagIV3 = [[UIImageView alloc] initWithFrame:CGRectMake(self.tagIV.left, self.tagIV2.bottom + TagIV_Padding, TagIV_Width, TagIV_Width)];
+        [self addSubview:self.tagIV3];
+        self.tagIV3.userInteractionEnabled = YES;
+        
+        self.tagLeftIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, TagIV_Width, TagIV_Width)];
+        [self addSubview:self.tagLeftIV];
+        self.tagLeftIV.userInteractionEnabled = YES;
+        
+        NSString *deleStr = @"科学_审核未通过";
+        self.deleBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.width - TagIV_Width, 0, TagIV_Width, TagIV_Width)];
+        [self addSubview:self.deleBtn];
+        [self.deleBtn setImage:[UIImage imageNamed:deleStr] forState:UIControlStateNormal];
+        self.deleBtn.hidden = YES;
+        
+        self.biaoji_label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.height - 17, self.width, 17)];
+        [self addSubview:self.biaoji_label];
+        self.biaoji_label.backgroundColor = Color_Black;
+        self.biaoji_label.font = TEXT_FONT_14;
+        self.biaoji_label.textAlignment = NSTextAlignmentCenter;
+        self.biaoji_label.textColor = Color_TextWhite_ff;
+        self.biaoji_label.alpha = 0.5;
+        self.biaoji_label.hidden = YES;
+        
+        self.selected = NO;
+        
+        self.zheZhaoView = [[UIView alloc] initWithFrame:self.bounds];
+        [self addSubview:self.zheZhaoView];
+        self.zheZhaoView.backgroundColor = Color_Black;
+        self.zheZhaoView.alpha = 0.3;
+        self.zheZhaoView.hidden = YES;
+        
+        // 加载指示器
+        self.indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        self.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+        self.indicatorView.hidden = YES;
+        self.indicatorView.hidesWhenStopped = YES;
+        self.indicatorView.centerX = self.centerX;
+        self.indicatorView.centerY = self.centerY;
+        [self addSubview:self.indicatorView];
+        
+        self.userInteractionEnabled = YES;
+        self.tagIV.userInteractionEnabled = YES;
+        self.tagIV2.userInteractionEnabled = YES;
+        self.tagIV3.userInteractionEnabled = YES;
+        self.tagLeftIV.userInteractionEnabled = YES;
+        self.biaoji_label.userInteractionEnabled = YES;
+        
+        // 手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageViewAction)];
+        [self addGestureRecognizer:tap];
+        
+        UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressImageViewAction:)];
+        longPressGesture.minimumPressDuration = 0.8f;//默认0.5秒
+        [self addGestureRecognizer:longPressGesture];
+    }
+    return self;
+}
+
+- (void)tapImageViewAction{
+    if (self.imageViewBlock) {
+        self.imageViewBlock();
+    }
+}
+- (void)longPressImageViewAction:(UIGestureRecognizer *)gestureRecognizer{
+    
+     if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+         if (self.longPressBlock) {
+             self.longPressBlock();
+         }
+     }
+}
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

@@ -1,0 +1,133 @@
+//
+//  TopMenuImageView.m
+//  XMPPDemo
+//
+//  Created by aidong on 15/4/22.
+//  Copyright (c) 2015年 aidong. All rights reserved.
+//
+
+#import "TopMenuImageView.h"
+#import "YYKit.h"
+
+@implementation TopMenuImageView
+
+- (void)layoutUI{
+    
+    if (self) {
+        
+        int width;
+        if (_itemWidth <= 0){
+            width = 60;
+        }else{
+            width = _itemWidth;
+        }
+        
+        int w = 52;
+        int h = 26;
+        
+        int n = self.left+(self.frame.size.width-width*[_items count])/2 + _offset + (width - w)/2;
+        
+        int t = (self.frame.size.height-h)/2;;
+        self.userInteractionEnabled = YES;
+        
+        _arrBtns = [[NSMutableArray alloc]init];
+        UIButton* btn;
+        UIFont* font15b= [UIFont systemFontOfSize:12];
+        
+        CGRect rect = CGRectMake(0, 0, w, h);
+        UIImage *selectImage = [ToolClass imageWithColor:[UIColor blueColor] rect:rect];
+        UIImage *normalImag = [ToolClass imageWithColor:Color_TableBG rect:rect];
+        
+        int i;
+        for(i = 0;i < [_items count];i++){
+            btn = [self createButtonWithRect:CGRectMake(n+width*i, t, w, h)
+                                       title:[_items objectAtIndex:i]
+                                   titleFont:font15b
+                                  titleColor:[UIColor blackColor]
+                                      normal:normalImag
+                                    selected:selectImage
+                                    selector:@selector(onClick:)
+                                      target:self];
+            btn.tag = i;
+            [self addSubview:btn];
+            [_arrBtns addObject:btn];
+        }
+    }
+}
+
+-(void)onClick:(UIButton*)sender{
+    
+    [self unSelectAll];
+    sender.selected = YES;
+    self.selected = sender.tag;
+    [sender setTitleColor:Color_TextWhite_ff forState:UIControlStateNormal];
+    if(self.delegate != nil && [self.delegate respondsToSelector:self.onClick])
+        [self.delegate performSelectorOnMainThread:self.onClick withObject:sender waitUntilDone:NO];
+}
+
+-(void)unSelectAll{
+    for(int i=0;i<[_arrBtns count];i++){
+        ((UIButton*)[_arrBtns objectAtIndex:i]).selected = NO;
+        [(UIButton*)[_arrBtns objectAtIndex:i] setTitleColor:Color_TextBlack forState:UIControlStateNormal];
+    }
+    _selected = -1;
+}
+// 默认触发，第一次选中那个
+-(void)selectOne:(NSInteger)n{
+    [self unSelectAll];
+    if(n >= [self.arrBtns count])
+        return;
+    ((UIButton*)[self.arrBtns objectAtIndex:n]).selected=YES;
+    [(UIButton*)[self.arrBtns objectAtIndex:n] setTitleColor:Color_TextWhite_ff forState:UIControlStateNormal];
+    _selected = n;
+}
+
+-(void)setTitle:(int)n title:(NSString*)s{
+    if(n >= [self.arrBtns count]){
+        return;
+    }
+    [(UIButton *)[self.arrBtns objectAtIndex:n] setTitle:s forState:UIControlStateNormal];
+}
+
+- (UIButton *)createButtonWithRect:(CGRect)frame
+                             title:(NSString *)title
+                         titleFont:(UIFont *)font
+                        titleColor:(UIColor *)titleColor
+                            normal:(UIImage *)normalImage
+                          selected:(UIImage *)clickIamge
+                          selector:(SEL)selector
+                            target:(id)target;
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = frame;
+    if (title != nil)
+        [button setTitle:title forState:UIControlStateNormal];
+    
+    if (titleColor != nil)
+        [button setTitleColor:titleColor forState:UIControlStateNormal];
+    
+    if (font != nil)
+        [button.titleLabel setFont:font];
+    
+    if (normalImage != nil)
+        [button setBackgroundImage:normalImage forState:UIControlStateNormal];
+    
+    if (clickIamge != nil)
+        [button setBackgroundImage:clickIamge forState:UIControlStateSelected];
+    
+    if ((selector != nil) && (target != nil))
+        [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    return button;
+}
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

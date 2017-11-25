@@ -1,0 +1,13 @@
+//
+//  TouchPropagatedScrollView.h
+//  V6
+//
+//  Created by aidong on 15/8/13.
+//  Copyright (c) 2015年 aidong. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TouchPropagatedScrollView : UIScrollView
+
+@end

@@ -1,5 +1,59 @@
 PODS:
-  - ZJDKit (0.1.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AvoidCrash (2.2.3)
+  - BAButton (2.6.5)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - DZNEmptyDataSet (1.8.1)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.15.1)
+  - Reachability (3.2)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZJDKit (0.1.0):
+    - AFNetworking
+    - AvoidCrash
+    - BAButton
+    - BlocksKit
+    - DZNEmptyDataSet
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - Reachability
+    - SDWebImage
+    - YYKit
 
 DEPENDENCIES:
   - ZJDKit (from `../`)
@@ -9,7 +63,18 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZJDKit: 2bf97ca6b530b41554e779605ae5067cdb2a6bce
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AvoidCrash: bc1e7e6bb8c977854e8111abc162a9fce53b40d5
+  BAButton: 4a59120abd74ca52aa5d85552d0cc0cf997ed0a2
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZJDKit: 1b6e137fd0177462811fad80912c9a7abec8ed12
 
 PODFILE CHECKSUM: e7e5bf9f74ac88d2bb2edd38c4a1d86bac799135
 

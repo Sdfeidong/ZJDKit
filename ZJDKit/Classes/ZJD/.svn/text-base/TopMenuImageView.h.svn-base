@@ -1,0 +1,29 @@
+//
+//  TopMenuImageView.h
+//  XMPPDemo
+//
+//  Created by aidong on 15/4/22.
+//  Copyright (c) 2015年 aidong. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TopMenuImageView : UIImageView
+
+@property (nonatomic, strong) NSMutableArray *arrBtns;
+@property (nonatomic, strong) NSMutableArray *items;
+
+@property (nonatomic, weak) NSObject *delegate;
+@property (nonatomic, assign) SEL		onClick;
+@property (nonatomic, assign) int		type;
+@property (nonatomic, assign) int       offset;
+@property (nonatomic, assign) int		itemWidth;
+@property (nonatomic, assign) NSInteger selected;
+
+- (void)layoutUI;
+
+-(void)unSelectAll;
+-(void)selectOne:(NSInteger)n;
+-(void)setTitle:(int)n title:(NSString*)s;
+
+@end

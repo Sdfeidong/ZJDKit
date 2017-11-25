@@ -1,0 +1,48 @@
+//
+//  ZJD_TapImageView.h
+//  V6
+//
+//  Created by aidong on 15/8/18.
+//  Copyright (c) 2015年 aidong. All rights reserved.
+//
+
+/**
+ * 为UIImageView添加tap手势。
+ * 用法：
+     ZJD_TapImageView *iv = [[ZJD_TapImageView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+     iv.image = [UIImage imageNamed:@"temp_背景"];
+     iv.imageViewBlock = ^(void){
+        // tap后触发的方法
+        [UIAlertView simpleAlert:@"tap!"];
+     };
+     [self addSubview:iv];
+ */
+#import <UIKit/UIKit.h>
+
+typedef void (^TapImageViewBlock)(void);
+typedef void (^LongPressBlock)(void);
+
+@interface ZJD_TapImageView : UIImageView
+
+@property (nonatomic, copy) TapImageViewBlock imageViewBlock;
+
+@property (nonatomic, copy) LongPressBlock longPressBlock;
+
+// 右侧
+@property (nonatomic ,strong) UIImageView *tagIV;
+@property (nonatomic ,strong) UIImageView *tagIV2;
+@property (nonatomic ,strong) UIImageView *tagIV3;
+
+@property (nonatomic ,strong) UIImageView *tagLeftIV;
+
+@property (nonatomic ,strong) UIButton *deleBtn;
+
+@property (nonatomic ,strong) UIView *zheZhaoView;
+
+@property (nonatomic ,assign) BOOL selected;
+
+@property (nonatomic , strong) UILabel *biaoji_label;
+
+@property (nonatomic , strong) UIActivityIndicatorView *indicatorView;
+
+@end
