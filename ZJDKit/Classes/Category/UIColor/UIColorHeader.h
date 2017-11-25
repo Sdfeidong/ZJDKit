@@ -9,15 +9,13 @@
 #ifndef UIColorHeader_h
 #define UIColorHeader_h
 
-#import "UIColor+YYAdd.h"
 #import "UIColor+Utils.h"
-
 /** *****************************************  **/
 
 #pragma mark - 颜色（color）
 
 // RGB颜色转换（16进制）(0x000000--0xFFFFFF)
-#define UIColorFromHexadecimal(_hex_) [UIColor colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
+#define UIColorFromHexadecimal(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 // 颜色(RGBA) (当 a=1 时,表示不透明）
 #define RGBACOLOR(r, g, b, a)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
