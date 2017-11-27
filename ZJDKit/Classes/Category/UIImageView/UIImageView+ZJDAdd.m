@@ -9,7 +9,6 @@
 #import "UIImageView+ZJDAdd.h"
 #import "ZJD_Header.h"
 
-#import "SDWebImageManager.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation UIImageView (ZJDAdd)

@@ -1,11 +1,13 @@
 use_frameworks!
 
+# 忽略引入的第三方警告
+inhibit_all_warnings!
+
 target 'ZJDKit_Example' do
-  pod 'ZJDKit', :path => '../'
+  
+    pod 'ZJDKit', :path => '../'
 
-  target 'ZJDKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
+    target 'ZJDKit_Tests' do
+        inherit! :search_paths
+    end
 end

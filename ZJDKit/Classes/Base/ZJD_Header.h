@@ -25,9 +25,9 @@
     // 网络相关
     #import "ZJD_Networking.h"
     #import "ZJD_ResourceFile.h"
+    #import "ZJD_FileManageUnit.h"
 
     // view
-    #import "ZJD_FileManageUnit.h"
     #import "ZJD_Button.h"
     #import "ZJD_TableView.h"
 
