@@ -25,9 +25,6 @@
 // 透明色（无颜色）
 #define CLEARCOLOR              [UIColor clearColor]
 
-// 金钱的显示颜色 （金黄色）
-#define Color_Money             RGBACOLOR(235, 194, 0, 1)
-
 // 颜色越来越淡 都是黑色
 #define Color_Black             [UIColor blackColor]
 #define Color_TextBlack         UIColorFromHexadecimal(0x0d0d0d)
@@ -62,7 +59,8 @@
 #define Color_TextBlue          UIColorFromHexadecimal(0x228ee6)
 // 红色 常用作价格
 #define Color_TextRedPrice      UIColorFromHexadecimal(0xff0000)
-
+// 金钱的显示颜色 （金黄色）
+#define Color_Money             RGBACOLOR(235, 194, 0, 1)
 //
 #define Color_BG_Note           RGBACOLOR(255, 251, 207, 1)
 

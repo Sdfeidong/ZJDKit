@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^LaunchAdClick)();
+typedef void (^LaunchAdClick)(void);
 typedef void (^LaunchAdCallback)(UIImage *image, NSString *imageURL);
-typedef void (^EndPlays)();
+typedef void (^EndPlays)(void);
 
 @interface ZJDLaunchAd : UIView
 

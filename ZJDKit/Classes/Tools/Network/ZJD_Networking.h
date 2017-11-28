@@ -106,13 +106,13 @@ typedef void (^ZJD_HandlerFail)(NSError *error);
 *  @param cacheTime 缓存时间，以秒为单位 -1 为永久缓存  0 为不缓存
 */
 + (NSURLSessionTask *)baseWithUrl:(NSString *)url
-                       params:(NSDictionary *)passDict
-                    cacheTime:(NSInteger)cacheTime
-                  requestType:(ZJD_RequestType)requestType
-                      success:(ZJD_HandlerSuccess)success
-                         fail:(ZJD_HandlerFail)fail
-                      showHUD:(BOOL)showHUD
-                   faileAlert:(BOOL)faileAlert;
+                           params:(NSDictionary *)passDict
+                        cacheTime:(NSInteger)cacheTime
+                      requestType:(ZJD_RequestType)requestType
+                          success:(ZJD_HandlerSuccess)success
+                             fail:(ZJD_HandlerFail)fail
+                          showHUD:(BOOL)showHUD
+                       faileAlert:(BOOL)faileAlert;
 
 /**
  *  上传图片方法
@@ -128,15 +128,15 @@ typedef void (^ZJD_HandlerFail)(NSError *error);
  *  @param showHUD    是否显示HUD
  */
 + (NSURLSessionTask *)uploadWithImage:(UIImage *)image
-                              url:(NSString *)url
-                         filename:(NSString *)filename
-                             name:(NSString *)name
-                           params:(NSDictionary *)passDict
-                         progress:(ZJD_HandlerProgress)progress
-                          success:(ZJD_HandlerSuccess)success
-                             fail:(ZJD_HandlerFail)fail
-                          showHUD:(BOOL)showHUD
-                       faileAlert:(BOOL)faileAlert;
+                                  url:(NSString *)url
+                             filename:(NSString *)filename
+                                 name:(NSString *)name
+                               params:(NSDictionary *)passDict
+                             progress:(ZJD_HandlerProgress)progress
+                              success:(ZJD_HandlerSuccess)success
+                                 fail:(ZJD_HandlerFail)fail
+                              showHUD:(BOOL)showHUD
+                           faileAlert:(BOOL)faileAlert;
 
 /**
  *  下载文件方法
@@ -150,11 +150,11 @@ typedef void (^ZJD_HandlerFail)(NSError *error);
  *  @return 返回请求任务对象，便于操作
  */
 + (NSURLSessionTask *)downloadWithUrl:(NSString *)url
-                       saveToPath:(NSString *)saveToPath
-                         progress:(ZJD_HandlerProgress )progressBlock
-                          success:(ZJD_HandlerSuccess )success
-                          failure:(ZJD_HandlerFail )fail
-                          showHUD:(BOOL)showHUD;
+                           saveToPath:(NSString *)saveToPath
+                             progress:(ZJD_HandlerProgress )progressBlock
+                              success:(ZJD_HandlerSuccess )success
+                              failure:(ZJD_HandlerFail )fail
+                              showHUD:(BOOL)showHUD;
 
 
 /**
@@ -167,15 +167,11 @@ typedef void (^ZJD_HandlerFail)(NSError *error);
  */
 + (NSString *)validImageUrlStr:(NSString *)imageUrlStr;
 
-#pragma mark - 获取接口地址、参数等
+#pragma mark - 获取公共参数
 /**
  添加公共参数
  */
 + (NSMutableDictionary *)getDefaultParamsWithDict:(NSDictionary *)passDict;
-/**
- 获取接口地址
- */
-+ (NSString *)getApiWithApi_name:(NSString *)api_name;
 
 @end
 

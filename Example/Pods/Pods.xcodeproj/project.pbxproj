@@ -410,6 +410,13 @@
 		D47CA8E9F652EFEC960FF98D5F69BDAC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E6588F423955370A6A94A368F8ECE /* SDWebImage.framework */; };
 		D4C73DDB342BC4D82EF96DFD6085A9E5 /* UITableView+YYAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E09C47437FD3F9EA74C5BE8A517DC54 /* UITableView+YYAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5D2A8F04D1B3799B40E18529C58E689 /* Pods-ZJDKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF752C67128F3B329D3B62EAD4AF3749 /* Pods-ZJDKit_Example-dummy.m */; };
+		D661FC491FCD5484007D53A0 /* STAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = D661FC421FCD5484007D53A0 /* STAlertView.h */; };
+		D661FC4A1FCD5484007D53A0 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D661FC431FCD5484007D53A0 /* STAlertView.m */; };
+		D661FC4B1FCD5484007D53A0 /* STModal.h in Headers */ = {isa = PBXBuildFile; fileRef = D661FC441FCD5484007D53A0 /* STModal.h */; };
+		D661FC4C1FCD5484007D53A0 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = D661FC451FCD5484007D53A0 /* STModal.m */; };
+		D661FC4D1FCD5484007D53A0 /* STModalUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D661FC461FCD5484007D53A0 /* STModalUtil.h */; };
+		D661FC4E1FCD5484007D53A0 /* RegularBusinessTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D661FC471FCD5484007D53A0 /* RegularBusinessTools.h */; };
+		D661FC4F1FCD5484007D53A0 /* RegularBusinessTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D661FC481FCD5484007D53A0 /* RegularBusinessTools.m */; };
 		D7BAF004C878A0EB9D7F0580EF531B15 /* UIButton+CountDown.h in Headers */ = {isa = PBXBuildFile; fileRef = 294C8CDDB36AC5001CFDA5491262387D /* UIButton+CountDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D820DE54D6E9E5C85E0F9BF8A399E5EF /* MJRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA4ACDB64BF9A3AA640D622C7E64C2E /* MJRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9E6FB793E6B00DB342E72B025602EAE /* YYTextLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D009349807C1FE00DF86BF7FF20B40 /* YYTextLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1031,6 +1038,13 @@
 		D49717D45D23EF75B5ED419A1F465BE7 /* UIApplication+YYAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+YYAdd.m"; path = "YYKit/Base/UIKit/UIApplication+YYAdd.m"; sourceTree = "<group>"; };
 		D4B0CA90FEBB7176BF8B23A7A52DDC4A /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		D4C404DB427482ED2EBEFFA59FEFD6DE /* ZJD_StarEvaluateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZJD_StarEvaluateView.m; sourceTree = "<group>"; };
+		D661FC421FCD5484007D53A0 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
+		D661FC431FCD5484007D53A0 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
+		D661FC441FCD5484007D53A0 /* STModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModal.h; sourceTree = "<group>"; };
+		D661FC451FCD5484007D53A0 /* STModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModal.m; sourceTree = "<group>"; };
+		D661FC461FCD5484007D53A0 /* STModalUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModalUtil.h; sourceTree = "<group>"; };
+		D661FC471FCD5484007D53A0 /* RegularBusinessTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularBusinessTools.h; sourceTree = "<group>"; };
+		D661FC481FCD5484007D53A0 /* RegularBusinessTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularBusinessTools.m; sourceTree = "<group>"; };
 		D7C5F8CDCB0DB0D7402FEFB41F49D91C /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		D813BA147BFB77E3E70860EEF8B64886 /* ZJDKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZJDKit.xcconfig; sourceTree = "<group>"; };
 		D81820C64A2AE735D05F72C565A1217C /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
@@ -2197,6 +2211,28 @@
 			name = Serialization;
 			sourceTree = "<group>";
 		};
+		D661FC401FCD5484007D53A0 /* RegularBusinessTools */ = {
+			isa = PBXGroup;
+			children = (
+				D661FC411FCD5484007D53A0 /* CustomAlert */,
+				D661FC471FCD5484007D53A0 /* RegularBusinessTools.h */,
+				D661FC481FCD5484007D53A0 /* RegularBusinessTools.m */,
+			);
+			path = RegularBusinessTools;
+			sourceTree = "<group>";
+		};
+		D661FC411FCD5484007D53A0 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				D661FC421FCD5484007D53A0 /* STAlertView.h */,
+				D661FC431FCD5484007D53A0 /* STAlertView.m */,
+				D661FC441FCD5484007D53A0 /* STModal.h */,
+				D661FC451FCD5484007D53A0 /* STModal.m */,
+				D661FC461FCD5484007D53A0 /* STModalUtil.h */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 		DA298CD455AE464197A85ECBE1DEEB22 /* Security */ = {
 			isa = PBXGroup;
 			children = (
@@ -2220,6 +2256,7 @@
 		E04C40A0B32EFD1CBE945A7ADCA353A6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D661FC401FCD5484007D53A0 /* RegularBusinessTools */,
 				9F3DBADEBA4F76B81B26FE3D8E3E1372 /* Network */,
 				B2B886B28EE3FE242B26F8BD9E01FB3E /* tools */,
 				21B1013E82F2462A9154095AD2A97852 /* Validate */,
@@ -2589,7 +2626,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D661FC4B1FCD5484007D53A0 /* STModal.h in Headers */,
+				D661FC4D1FCD5484007D53A0 /* STModalUtil.h in Headers */,
 				E299EA976B9009CC290F60AA3CAE6761 /* Pods-ZJDKit_Example-umbrella.h in Headers */,
+				D661FC4E1FCD5484007D53A0 /* RegularBusinessTools.h in Headers */,
+				D661FC491FCD5484007D53A0 /* STAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3155,6 +3196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D661FC4F1FCD5484007D53A0 /* RegularBusinessTools.m in Sources */,
+				D661FC4C1FCD5484007D53A0 /* STModal.m in Sources */,
+				D661FC4A1FCD5484007D53A0 /* STAlertView.m in Sources */,
 				D5D2A8F04D1B3799B40E18529C58E689 /* Pods-ZJDKit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

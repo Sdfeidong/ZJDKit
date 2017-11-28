@@ -25,7 +25,8 @@ typedef NS_ENUM(NSInteger, JPSegmentedButtonState) {
 
 // 初始化方法（唯一初始化方法）
 - (instancetype)initWithFrame:(CGRect)frame
-                        items:(NSArray *)items;
+                        items:(NSArray *)items
+             selectTitleColor:(UIColor *)selectTitleColor;
 
 // 添加目标动作的方法
 - (void)addTarget:(id)target action:(SEL)action;

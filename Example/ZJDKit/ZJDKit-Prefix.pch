@@ -15,3 +15,8 @@
     #import "ZJD_Header.h"
 
 #endif
+
+#define Color_NavBackgroundColor             RGBACOLOR(51, 153, 255, 1)
+
+
+

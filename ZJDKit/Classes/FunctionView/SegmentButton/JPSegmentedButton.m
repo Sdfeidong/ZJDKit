@@ -41,8 +41,10 @@ _Pragma("clang diagnostic pop") \
 @implementation JPSegmentedButton
 
 #pragma mark - 初始化方法（唯一初始化方法）
-- (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)items
-{
+- (instancetype)initWithFrame:(CGRect)frame
+                        items:(NSArray *)items
+             selectTitleColor:(UIColor *)selectTitleColor {
+    
     if (self = [super initWithFrame:frame]) {
         // 初始化部分变量
         totalItems = [NSMutableArray array];
@@ -50,7 +52,7 @@ _Pragma("clang diagnostic pop") \
         
         normalTitleColor = Color_TextBlack_33;
         highlightedTitleColor = [UIColor grayColor];
-        selectedTitleColor = [UIColor appNavigationBarColor];
+        selectedTitleColor = selectTitleColor;
         
         self.titleFont = [UIFont systemFontOfSize:17];
         

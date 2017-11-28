@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^XYRollNewDataBlock)(NSArray * __nullable newData, NSIndexPath * _Nullable reloadIndexPath);
-typedef NSArray *__nonnull(^XYRollOriginalDataBlock)();
+typedef NSArray *__nonnull(^XYRollOriginalDataBlock)(void);
 
 @interface UIView (RollView)
 

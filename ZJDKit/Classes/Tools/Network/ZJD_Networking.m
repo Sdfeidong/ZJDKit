@@ -16,6 +16,8 @@
 #import "YYKit.h"
 #import "MJExtension.h"
 
+#define NUD_httpSecretKey       @"httpSecretKey"
+
 static NSMutableArray *tasks;
 @implementation ZJD_Networking
 
@@ -698,8 +700,10 @@ static NSMutableArray *tasks;
 
     NSMutableDictionary *mDic = ([ToolClass isNotEmptyDict:passDict]) ? [passDict mutableCopy] : [NSMutableDictionary new];
 
-    // 书香京城
-    [mDic setObject:@"UNIQUE" forKey:@"skey"];
+    // 网络请求隐藏的加密字段
+    if ([NUD_SUD objectForKey:NUD_httpSecretKey]) {
+        [mDic setObject:[NUD_SUD objectForKey:NUD_httpSecretKey] forKey:@"skey"];
+    }
 
     NSArray *myKeys = [mDic allKeys];
     // 排序
@@ -739,28 +743,6 @@ static NSMutableArray *tasks;
     // ...加默认参数
     
     return mDic;
-}
-/**
- 获取接口地址
- */
-+ (NSString *)getApiWithApi_name:(NSString *)api_name {
-
-    // 接口地址 IP + 项目名称 + 接口名称
-    NSString *ip_sso = @"http://120.27.45.70:19030";
-    NSString *ip_user = @"http://120.27.45.70:19030";
-
-    NSString *api = nil;
-    if ([api_name containsString:@"sso"]) {
-        // 登录 下接口
-        api = [NSString stringWithFormat:@"%@%@",ip_sso,api_name];
-    }
-    else if ([api_name containsString:@"user"]) {
-        // user 下接口
-        api = [NSString stringWithFormat:@"%@%@",ip_user,api_name];
-    }
-
-    // NSLog(@"api : %@",api);
-    return api;
 }
 @end
 

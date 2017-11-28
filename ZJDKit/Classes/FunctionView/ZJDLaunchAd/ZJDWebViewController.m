@@ -71,7 +71,7 @@
     }];
     
     // 放在此处以免 block造成的异步。
-    self.navIV.backgroundColor = [UIColor appNavigationBarColor];
+    // self.navIV.backgroundColor;
     // 默认不透明
     self.navIV.alpha = 1;
 }
