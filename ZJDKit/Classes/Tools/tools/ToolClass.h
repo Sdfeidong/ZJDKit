@@ -208,7 +208,7 @@ typedef void(^myBlock)(BOOL seccess);
 
 #pragma mark - 其它
 /**
- 当前账号是否支持 指纹登录验证
+ 当前账号是否支持 指纹登录验证 sud_key (log_flag登录标记)
  
  @return YES/NO
  */

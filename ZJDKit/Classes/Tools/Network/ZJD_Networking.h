@@ -21,6 +21,11 @@
 #define RequestTimeOutInterval              10.f
 
 /**
+ *  网络请求隐藏字段
+ */
+#define NUD_httpSecretKey       @"httpSecretKey"
+
+/**
  *  网络状况
  */
 typedef NS_ENUM (NSInteger , ZJD_NetworkStatus) {

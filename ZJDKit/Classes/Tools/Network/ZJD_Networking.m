@@ -16,8 +16,6 @@
 #import "YYKit.h"
 #import "MJExtension.h"
 
-#define NUD_httpSecretKey       @"httpSecretKey"
-
 static NSMutableArray *tasks;
 @implementation ZJD_Networking
 
