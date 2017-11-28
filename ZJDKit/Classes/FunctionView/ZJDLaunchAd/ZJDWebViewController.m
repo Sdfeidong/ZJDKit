@@ -8,7 +8,9 @@
 
 #import "ZJDWebViewController.h"
 #import <WebKit/WKWebView.h>
+
 #import "ZJD_Header.h"
+
 @interface ZJDWebViewController ()<UIWebViewDelegate> {
     
     // 加载详情的web
@@ -47,6 +49,12 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     NSString *navTitle = @"广告";
+    if (self.viewType == ZJDWebViewTypeAas) {
+        navTitle = @"广告";
+    } else if (self.viewType == ZJDWebViewTypeHttp) {
+        navTitle = @"";
+    }
+    
     [self createNavWithTitle:navTitle createMenuItem:^UIView *(int nIndex) {
         
         if (nIndex == 0){
@@ -58,7 +66,7 @@
             [btn addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
             return btn;
         }
-    
+        
         return nil;
     }];
     
@@ -137,6 +145,20 @@
 }
 
 #pragma mark - BtnAction
+
+#pragma mark - 跳转方法
++ (void)jumpWebviewWith:(NSString *)url
+                superVC:(UIViewController *)superVC
+               viewType:(ZJDWebViewType)viewType
+             backAction:(BackActionBlock)backAction{
+    
+    // 广告在webview中打开
+    ZJDWebViewController *vc = [[ZJDWebViewController alloc] init];
+    vc.urlStr = url;
+    vc.viewType = viewType;
+    vc.beingFromPushViewController = YES;
+    [superVC.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - Notification
 - (void)addNotification {
