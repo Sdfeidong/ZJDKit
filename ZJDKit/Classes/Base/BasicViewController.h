@@ -14,6 +14,7 @@ typedef void (^BackActionBlock)(void);
 
 @property (nonatomic, strong) UIImageView *statusBarView;
 @property (nonatomic, strong) UIImageView *navIV;// 包括statusBar
+@property (nonatomic, strong) UIColor *navBackgroundColor;
 @property (nonatomic, strong) UIView *navView;
 
 @property (nonatomic, strong) UIView *rightV;

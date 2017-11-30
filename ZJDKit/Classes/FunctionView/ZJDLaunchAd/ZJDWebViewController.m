@@ -71,7 +71,7 @@
     }];
     
     // 放在此处以免 block造成的异步。
-    // self.navIV.backgroundColor;
+    self.navIV.backgroundColor = self.navBackgroundColor;
     // 默认不透明
     self.navIV.alpha = 1;
 }
@@ -156,7 +156,7 @@
     // 广告在webview中打开
     ZJDWebViewController *vc = [[ZJDWebViewController alloc] init];
     vc.urlStr = url;
-    vc.navIV.backgroundColor = navColor;
+    vc.navBackgroundColor = navColor;
     vc.viewType = viewType;
     vc.beingFromPushViewController = YES;
     [superVC.navigationController pushViewController:vc animated:YES];
