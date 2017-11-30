@@ -156,6 +156,7 @@
     // 广告在webview中打开
     ZJDWebViewController *vc = [[ZJDWebViewController alloc] init];
     vc.urlStr = url;
+    vc.navIV.backgroundColor = navColor;
     vc.viewType = viewType;
     vc.beingFromPushViewController = YES;
     [superVC.navigationController pushViewController:vc animated:YES];
