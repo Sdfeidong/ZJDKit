@@ -149,6 +149,7 @@
 #pragma mark - 跳转方法
 + (void)jumpWebviewWith:(NSString *)url
                 superVC:(UIViewController *)superVC
+               navColor:(UIColor *)navColor
                viewType:(ZJDWebViewType)viewType
              backAction:(BackActionBlock)backAction{
     
