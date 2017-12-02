@@ -115,7 +115,7 @@
     
     // 在pop的栈里肯定是push
     for (BasicViewController * controller in self.navigationController.viewControllers) { //遍历
-        if ([controller isKindOfClass:self]) { //这里判断是否为你想要跳转的页面
+        if ([controller isKindOfClass:[self class]]) { //这里判断是否为你想要跳转的页面
             return YES;
         }
     }
