@@ -92,29 +92,51 @@
 }
 
 #pragma mark - btnAction
+- (BOOL)isFromPush {
+    
+    /** 判断方法一
+    // 当前vc
+    // [self.navigationController.viewControllers.firstObject isEqual:self]
+    // [self.navigationController.viewControllers indexOfObject:self] == 0
+    if (self.navigationController.topViewController == self) {
+        return YES;
+    }
+    return NO;
+     */
+    
+    /** 判断方法二
+    // 如果只是单个vc present的话判断没问题
+    // 但如果是先present nav 再nav push 就会判断失误
+    if (self.presentingViewController) {
+        return YES;
+    }
+    return NO;
+    */
+    
+    // 在pop的栈里肯定是push
+    for (BasicViewController * controller in self.navigationController.viewControllers) { //遍历
+        if ([controller isKindOfClass:self]) { //这里判断是否为你想要跳转的页面
+            return YES;
+        }
+    }
+    return NO;
+}
 - (void)backBtnAction{
-
+    
+    // 返回前的操作
     if (self.backActionBlock) {
         self.backActionBlock();
     }
     
-    if (self.presentingViewController) {
+    // 返回
+    if ([self isFromPush]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
         [self dismissViewControllerAnimated:YES completion:^{
             
         }];
     }
-    else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    
-    /** 判断方法二
-     if (self.navigationController.topViewController == self) {
-        [self.navigationController popViewControllerAnimated:YES];
-     }
-     else {
-        [self dismissViewControllerAnimated:YES completion:nil];
-     }
-     */
 }
 
 - (void)backPopToViewControllerClass:(Class)aClass {

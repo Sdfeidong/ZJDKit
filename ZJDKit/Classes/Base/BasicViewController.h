@@ -35,4 +35,8 @@ typedef void (^BackActionBlock)(void);
  */
 - (void)backPopToViewControllerClass:(Class)aClass;
 
+/**
+ *  是否是通过nav push过来的
+ */
+- (BOOL)isFromPush;
 @end
