@@ -52,22 +52,6 @@
  获取非用户文件存储路径
  */
 + (NSString *)documentFolder;
-/**
- 获取单个文件的大小
- */
-+ (long long)fileSizeAtPath:(NSString *) filePath;
-/**
- 获取某个文件夹的大小 (包括其内部所有的文件夹和文件)
- */
-+ (float )folderSizeAtPath:(NSString *) folderPath;
-/**
- 将文件的大小（B）转化为（多少G/M/B）
- */
-+ (NSString *)fileSize:(long long)size;
-/**
- 获取某个路径下文件列表
- */
-+ (NSArray *)readFileListsWithFloderPath:(NSString *)floderPath;
 
 @end
 

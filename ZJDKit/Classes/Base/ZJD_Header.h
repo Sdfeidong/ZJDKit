@@ -25,6 +25,7 @@
     // 网络相关
     #import "ZJD_Networking.h"
     #import "ZJD_ResourceFile.h"
+    #import "ZJD_FileManager.h"
     #import "ZJD_FileManageUnit.h"
 
     // view
@@ -41,6 +42,7 @@
     #import "UINavigationBar+Other.h"
     #import "MBProgressHUD+Additions.h"
     #import "UIImageView+toBig.h"
+    #import "UIImageView+ZJDAdd.h"
     #import "UILabel+EdgeInsert.h"
     #import "UIViewController+ZJDAdd.h"
 

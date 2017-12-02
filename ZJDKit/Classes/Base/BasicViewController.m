@@ -10,7 +10,7 @@
 #import "YYKit.h"
 #import "ZJD_Macros.h"
 
-@interface BasicViewController (){
+@interface BasicViewController ()<UIGestureRecognizerDelegate>{
     
 }
 
@@ -22,7 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
+    //开启iOS7及以上的滑动返回效果
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    }
 }
 #pragma mark - viewWillAppear:
 - (void)viewWillAppear:(BOOL)animated{
@@ -94,11 +98,13 @@
         self.backActionBlock();
     }
     
-    if (self.beingFromPushViewController) {
-    
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }
+    else {
         [self.navigationController popViewControllerAnimated:YES];
-    } else {
-        [self dismissViewControllerAnimated:YES completion:^{}];
     }
 }
 
@@ -106,9 +112,34 @@
     
     for (BasicViewController * controller in self.navigationController.viewControllers) { //遍历
         if ([controller isKindOfClass:aClass]) { //这里判断是否为你想要跳转的页面
+            
+            if (self.backActionBlock) {
+                self.backActionBlock();
+            }
+            
             // 跳转
             [self.navigationController popToViewController:controller animated:YES];
         }
+    }
+}
+
+// UIGestureRecognizerDelegate 重写侧滑协议
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    if (self.navigationController.childViewControllers.count == 1) {
+        return NO;
+    }
+    return YES;
+}
+// 手势返回响应
+- (void)didMoveToParentViewController:(UIViewController*)parent{
+    [super didMoveToParentViewController:parent];
+    if(!parent){
+        if (self.backActionBlock) {
+            self.backActionBlock();
+        }
+        NSLog(@"parent :%@",parent);
+        NSLog(@"~~~%@ 控制器 滑动返回成功~~~",[self class]);
     }
 }
 

@@ -14,15 +14,6 @@ static const CGFloat CELL_SEPARATOR_LINE_HEIGHT = 0.6f;
 
 
 /** *****************************************  **/
-#pragma mark - 沙盒路径
-
-#define PATH_OF_APP_HOME        NSHomeDirectory()
-#define PATH_OF_TEMP            NSTemporaryDirectory()
-#define PATH_OF_DOCUMENT        [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
-
-#define USER_VIDEO_Directory    [ZJD_FileManageUnit userFolder:@"video"]
-
-/** *****************************************  **/
 
 #pragma mark - GCD
 
@@ -193,13 +184,11 @@ static const CGFloat CELL_SEPARATOR_LINE_HEIGHT = 0.6f;
 #endif
 
 // 重写NSLog,Debug模式下打印日志和当前行数
-/** BAButton重复定义
-#ifdef DEBUG
+#ifndef DEBUG
 #define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(FORMAT, ...) nil
 #endif
- */
 
 // DEBUG  模式下打印日志,当前行 并弹出一个警告
 #ifdef DEBUG

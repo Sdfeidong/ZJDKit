@@ -7,7 +7,4 @@ target 'ZJDKit_Example' do
   
     pod 'ZJDKit', :path => '../'
 
-    target 'ZJDKit_Tests' do
-        inherit! :search_paths
-    end
 end

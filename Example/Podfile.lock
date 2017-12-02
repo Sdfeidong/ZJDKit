@@ -25,7 +25,7 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - ZJDKit (0.5.0):
+  - ZJDKit (0.5.8):
     - AFNetworking
     - DZNEmptyDataSet
     - MBProgressHUD
@@ -51,8 +51,8 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZJDKit: 63e867be1c0515139e74f3a3e65e3e87e3dbcb48
+  ZJDKit: 09c3d010e635922b89b1fc4cf2088f8056fbf7ef
 
-PODFILE CHECKSUM: a33699775b181591b7405f4b75f391ef8ef415c3
+PODFILE CHECKSUM: 4f6c0d09f1241561703d83d7d30ff1bb9f58a991
 
 COCOAPODS: 1.2.1
