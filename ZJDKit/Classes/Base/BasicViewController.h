@@ -23,8 +23,6 @@ typedef void (^BackActionBlock)(void);
 
 @property (nonatomic, copy) BackActionBlock backActionBlock;
 
-@property (nonatomic, assign) BOOL beingFromPushViewController;
-
 - (void)createNavWithTitle:(NSString *)szTitle createMenuItem:(UIView *(^)(int nIndex))menuItem;
 
 #pragma mark - btnAction

@@ -158,7 +158,6 @@
     vc.urlStr = url;
     vc.navBackgroundColor = navColor;
     vc.viewType = viewType;
-    vc.beingFromPushViewController = YES;
     [superVC.navigationController pushViewController:vc animated:YES];
 }
 

@@ -106,6 +106,15 @@
     else {
         [self.navigationController popViewControllerAnimated:YES];
     }
+    
+    /** 判断方法二
+     if (self.navigationController.topViewController == self) {
+        [self.navigationController popViewControllerAnimated:YES];
+     }
+     else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+     }
+     */
 }
 
 - (void)backPopToViewControllerClass:(Class)aClass {
