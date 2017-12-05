@@ -22,10 +22,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     __async_main__,^{
-        NSLog(@"haha !");
+
     });
     
-    NSLog(@"%f",self.view.width);
+    NSLog(@"haha");
 }
 
 - (void)didReceiveMemoryWarning

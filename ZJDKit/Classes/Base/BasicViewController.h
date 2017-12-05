@@ -27,6 +27,14 @@ typedef void (^BackActionBlock)(void);
 
 #pragma mark - btnAction
 /**
+ *  是否是通过nav push过来的
+ */
+- (BOOL)isFromPush;
+
+- (void)popBack;
+- (void)dismissBack;
+
+/**
  *  默认返回上一个controller
  */
 - (void)backBtnAction;
@@ -35,8 +43,4 @@ typedef void (^BackActionBlock)(void);
  */
 - (void)backPopToViewControllerClass:(Class)aClass;
 
-/**
- *  是否是通过nav push过来的
- */
-- (BOOL)isFromPush;
 @end

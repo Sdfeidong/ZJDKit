@@ -7,8 +7,10 @@
 //
 
 #import "BasicViewController.h"
+
 #import "YYKit.h"
 #import "ZJD_Macros.h"
+#import "UIViewController+ZJDAdd.h"
 
 @interface BasicViewController ()<UIGestureRecognizerDelegate>{
     
@@ -130,13 +132,21 @@
     
     // 返回
     if ([self isFromPush]) {
-        [self.navigationController popViewControllerAnimated:YES];
+        [self popBack];
     }
     else {
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+        [self dismissBack];
     }
+}
+
+- (void)popBack {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)dismissBack {
+    UIViewController *vc = [UIViewController getTopLevelController:self];
+    [vc dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)backPopToViewControllerClass:(Class)aClass {

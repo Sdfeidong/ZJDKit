@@ -211,7 +211,7 @@ static NSMutableArray *tasks;
 
     // 处理参数
     NSMutableDictionary *params = [ZJD_Networking requestPostFormData:passDict];
-    DLog(@"\n 请求地址----%@\n 请求参数----%@",url,params);
+    NSLog(@"\n 请求地址----%@\n 请求参数----%@",url,params);
 
     AFHTTPSessionManager *manager=[self getAFManager];
     NSURLSessionTask *sessionTask=nil;
@@ -233,7 +233,7 @@ static NSMutableArray *tasks;
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
-        DLog(@"上传进度--%lld,总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+        NSLog(@"上传进度--%lld,总进度---%lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         if (progress) {
             progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
         }
@@ -268,7 +268,7 @@ static NSMutableArray *tasks;
                           failure:(ZJD_HandlerFail)fail
                           showHUD:(BOOL)showHUD{
 
-    DLog(@"请求地址----%@\n    ",url);
+    NSLog(@"请求地址----%@\n    ",url);
     if (url==nil) {
         return nil;
     }
@@ -283,7 +283,7 @@ static NSMutableArray *tasks;
     NSURLSessionTask *sessionTask = nil;
 
     sessionTask = [manager downloadTaskWithRequest:downloadRequest progress:^(NSProgress * _Nonnull downloadProgress) {
-        DLog(@"下载进度--%.1f",1.0 * downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+        NSLog(@"下载进度--%.1f",1.0 * downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
         //回到主线程刷新UI
         dispatch_async(dispatch_get_main_queue(), ^{
             if (progressBlock) {
@@ -295,7 +295,7 @@ static NSMutableArray *tasks;
         if (!saveToPath) {
             
             NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-            DLog(@"默认路径--%@",downloadURL);
+            NSLog(@"默认路径--%@",downloadURL);
             return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
             
         }else{
@@ -304,7 +304,7 @@ static NSMutableArray *tasks;
         }
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        DLog(@"下载文件成功");
+        NSLog(@"下载文件成功");
         
         [[self tasks] removeObject:sessionTask];
         
@@ -358,19 +358,19 @@ static NSMutableArray *tasks;
         switch (status)
         {
             case AFNetworkReachabilityStatusUnknown: // 未知网络
-            DLog(@"未知网络");
+            NSLog(@"未知网络");
             [ZJD_Networking sharedZJD_Networking].networkStats = ZJD_NetworkStatusUnknown;
             break;
             case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
-            DLog(@"没有网络");
+            NSLog(@"没有网络");
             [ZJD_Networking sharedZJD_Networking].networkStats = ZJD_NetworkStatusNotReachable;
             break;
             case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
-            DLog(@"手机自带网络");
+            NSLog(@"手机自带网络");
             [ZJD_Networking sharedZJD_Networking].networkStats = ZJD_NetworkStatusReachableViaWWAN;
             break;
             case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
-            DLog(@"WIFI");
+            NSLog(@"WIFI");
             [ZJD_Networking sharedZJD_Networking].networkStats=ZJD_NetworkStatusReachableViaWiFi;
             break;
         }
@@ -577,7 +577,7 @@ static NSMutableArray *tasks;
                showHUD:(BOOL)showHUD
             faileAlert:(BOOL)faileAlert {
 
-    DLog(@"error = %@",error);
+    NSLog(@"error = %@",error);
     if (fail) {
         fail(error);
     }
