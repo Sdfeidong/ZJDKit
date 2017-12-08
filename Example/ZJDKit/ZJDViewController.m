@@ -25,7 +25,7 @@
 
     });
     
-    NSLog(@"haha");
+    NSLog(@"haha %f",D_YEAR);
 }
 
 - (void)didReceiveMemoryWarning

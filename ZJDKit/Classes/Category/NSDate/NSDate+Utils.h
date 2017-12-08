@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#define D_MINUTE            (60.f)
+#define D_HOUR              (60.f    * D_MINUTE)
+#define D_DAY               (24.f    * D_HOUR)
+#define D_WEEK              (7.f     * D_DAY)
+#define D_YEAR              (365.f   * D_DAY)
+
 @interface NSDate (Utils)
 
 + (NSDate *)dateWithYear:(NSInteger)year

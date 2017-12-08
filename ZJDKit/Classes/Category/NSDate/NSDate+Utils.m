@@ -11,12 +11,6 @@
 #define DATE_COMPONENTS     (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay |  NSCalendarUnitHour |  NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
 #define CURRENT_CALENDAR    [NSCalendar currentCalendar]
 
-#define D_MINUTE            (60.f)
-#define D_HOUR              (60.f    * D_MINUTE)
-#define D_DAY               (24.f    * D_HOUR)
-#define D_WEEK              (7.f     * D_DAY)
-#define D_YEAR              (365.f   * D_DAY)
-
 @implementation NSDate (Utils)
 
 + (NSDate *)dateWithYear:(NSInteger)year
