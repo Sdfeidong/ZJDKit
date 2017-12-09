@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJDKit'
-  s.version          = '0.6.4'
+  s.version          = '0.6.5'
   s.summary          = '代码积累'
 
 # This description is used to generate tags and improve search results.
@@ -48,5 +48,6 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh'
   s.dependency 'MJExtension'
   s.dependency 'DZNEmptyDataSet'
+  s.dependency 'BAButton'
 
 end
