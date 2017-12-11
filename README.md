@@ -21,10 +21,8 @@ pod 'ZJDKit'
 ```
 
 ## Author
-
-Sdfeidong, zh75701.aidong@qq.com
-Blog：http://blog.csdn.net/aaidong
-GitHub：https://github.com/Sdfeidong
+- `Blog`： http://blog.csdn.net/aaidong
+- `GitHub`： https://github.com/Sdfeidong
 
 ## License
 
