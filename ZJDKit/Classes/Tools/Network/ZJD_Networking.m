@@ -499,10 +499,19 @@ static NSMutableArray *tasks;
 
     // 点击取消请求的不提示网络错误
     if (error.code != -999) {
-        if (error.code == -1001) {
+        if (error.code == 404) {
+            // page not found!
+            [MBProgressHUD showTipMessageInWindow:@"服务器连接异常"];
+        }
+        else if (error.code == -1001) {
             // 请求超时
             [MBProgressHUD showTipMessageInWindow:Msg_NetworkTimeOut];
-        } else {
+        }
+        else if (error.code == -1004) {
+            // 
+            [MBProgressHUD showTipMessageInWindow:@"未能连接到服务器"];
+        }
+        else {
             // 其它网络错误
             [MBProgressHUD showTipMessageInWindow:Msg_NetworkAnomalies];
         }
