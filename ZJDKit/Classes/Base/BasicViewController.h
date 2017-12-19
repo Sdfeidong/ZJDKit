@@ -23,6 +23,8 @@ typedef void (^BackActionBlock)(void);
 
 @property (nonatomic, copy) BackActionBlock backActionBlock;
 
+@property (nonatomic, copy) NSString *navTitle;
+
 - (void)createNavWithTitle:(NSString *)szTitle createMenuItem:(UIView *(^)(int nIndex))menuItem;
 
 #pragma mark - btnAction

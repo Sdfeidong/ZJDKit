@@ -48,14 +48,8 @@
 - (void)layoutNav {
     
     self.view.backgroundColor = [UIColor whiteColor];
-    NSString *navTitle = @"广告";
-    if (self.viewType == ZJDWebViewTypeAas) {
-        navTitle = @"广告";
-    } else if (self.viewType == ZJDWebViewTypeHttp) {
-        navTitle = @"";
-    }
     
-    [self createNavWithTitle:navTitle createMenuItem:^UIView *(int nIndex) {
+    [self createNavWithTitle:self.navTitle createMenuItem:^UIView *(int nIndex) {
         
         if (nIndex == 0){
             
@@ -150,14 +144,14 @@
 + (void)jumpWebviewWith:(NSString *)url
                 superVC:(UIViewController *)superVC
                navColor:(UIColor *)navColor
-               viewType:(ZJDWebViewType)viewType
-             backAction:(BackActionBlock)backAction{
+               navTitle:(NSString *)navTitle
+             backAction:(BackActionBlock)backAction {
     
     // 广告在webview中打开
     ZJDWebViewController *vc = [[ZJDWebViewController alloc] init];
     vc.urlStr = url;
     vc.navBackgroundColor = navColor;
-    vc.viewType = viewType;
+    vc.navTitle = navTitle;
     [superVC.navigationController pushViewController:vc animated:YES];
 }
 
