@@ -9,6 +9,7 @@
 #import "ZJDViewController.h"
 
 #import "ZJD_Macros.h"
+#import "ZJDWebViewController.h"
 
 @interface ZJDViewController ()
 
@@ -21,11 +22,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    __async_main__,^{
-
-    });
+    // ...btn
     
-    NSLog(@"haha %f",D_YEAR);
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 60)];
+    btn.backgroundColor = RANDCOLOR;
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+- (void)btnAction {
+    
+    [ZJDWebViewController jumpWebviewWith:@"http://live.polyv.cn/watch/145836" superVC:self navColor:RANDCOLOR navTitle:@"直播间" backAction:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

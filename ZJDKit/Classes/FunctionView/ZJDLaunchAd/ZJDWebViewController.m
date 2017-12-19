@@ -7,14 +7,14 @@
 //
 
 #import "ZJDWebViewController.h"
-#import <WebKit/WKWebView.h>
+#import <WebKit/WebKit.h>
 
 #import "ZJD_Header.h"
 
-@interface ZJDWebViewController ()<UIWebViewDelegate> {
+@interface ZJDWebViewController ()<WKNavigationDelegate> {
     
     // 加载详情的web
-    UIWebView *_webView;
+    WKWebView *_webView;
     // 加载web的菊花
     UIActivityIndicatorView *_webActivityView;
 }
@@ -72,8 +72,9 @@
 // 其它view
 - (void)layoutOtherView {
     
-    _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, kNavBarHeight, kMScreen_W, kMScreen_H - kNavBarHeight)];
-    _webView.delegate = self;
+    _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, kNavBarHeight, kMScreen_W, kMScreen_H - kNavBarHeight)];
+    _webView.navigationDelegate = self;
+    _webView.backgroundColor = Color_TableBG;
     [self.view addSubview:_webView];
     
     NSURL *url = [NSURL URLWithString:self.urlStr];
@@ -101,13 +102,16 @@
 }
 
 #pragma mark - UIWebViewDelegate
-- (void)webViewDidStartLoad:(UIWebView *)webView {
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
 }
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [_webActivityView stopAnimating];
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    
 }
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
     [_webActivityView stopAnimating];
     
@@ -129,13 +133,14 @@
                        "</script>"
                        "</body>"
                        "</html>"];
-    [webView stringByEvaluatingJavaScriptFromString:htmls];
     
-    /**
-     //修改服务器页面的meta的值
-     NSString *meta = [NSString stringWithFormat:@"document.getElementsByName(\"viewport\")[0].content = \"width=%f, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\"", mywebView.frame.size.width-300];
-     [webView stringByEvaluatingJavaScriptFromString:meta];
-     */
+    [webView evaluateJavaScript:htmls completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        
+    }];
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
+    [_webActivityView stopAnimating];
 }
 
 #pragma mark - BtnAction
