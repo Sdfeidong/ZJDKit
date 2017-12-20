@@ -174,7 +174,7 @@
 				ORGANIZATIONNAME = Sdfeidong;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = BM58V9RZ2Y;
+						DevelopmentTeam = 3WCH2L88W2;
 					};
 				};
 			};
@@ -390,7 +390,7 @@
 			baseConfigurationReference = 472044F21FA3B72B465773A5 /* Pods-ZJDKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BM58V9RZ2Y;
+				DEVELOPMENT_TEAM = 3WCH2L88W2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZJDKit/ZJDKit-Prefix.pch";
 				INFOPLIST_FILE = "ZJDKit/ZJDKit-Info.plist";
@@ -407,7 +407,7 @@
 			baseConfigurationReference = D3101359D222A2985724A900 /* Pods-ZJDKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BM58V9RZ2Y;
+				DEVELOPMENT_TEAM = 3WCH2L88W2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZJDKit/ZJDKit-Prefix.pch";
 				INFOPLIST_FILE = "ZJDKit/ZJDKit-Info.plist";

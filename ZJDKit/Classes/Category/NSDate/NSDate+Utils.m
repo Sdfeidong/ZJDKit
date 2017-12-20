@@ -409,9 +409,17 @@
     return localeDate;
 }
 
-/** 获取当前时间的时间戳,返回字符串 */
+/** 获取当前时间的时间戳,返回字符串 10位 */
 + (NSString *)getCurrentDateTimestamp{
     return [self getTimestampFromDate:[self getCurrentDate]];
+}
+
+/** 获取当前时间的时间戳,返回字符串 10位 */
++ (NSString *)getCurrentDateTimestamp13{
+    
+    NSString *timestamp = [self getCurrentDateTimestamp];
+    long long timeInterval = [timestamp doubleValue] * 1000;
+    return [NSString stringWithFormat:@"%lld",timeInterval];
 }
 
 /**

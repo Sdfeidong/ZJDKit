@@ -91,6 +91,9 @@
 /** 获取当前时间的时间戳,返回字符串 */
 + (NSString *)getCurrentDateTimestamp;
 
+/** 获取当前时间的时间戳,返回字符串 10位 */
++ (NSString *)getCurrentDateTimestamp13;
+
 /**
  *  格式时间 转 NSDate（如：时间2015-10-15)
  */

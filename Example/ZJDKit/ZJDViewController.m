@@ -28,6 +28,8 @@
     btn.backgroundColor = RANDCOLOR;
     [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    NSLog(@"%@",[NSDate getCurrentDateTimestamp13]);
 }
 
 - (void)btnAction {
