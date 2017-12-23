@@ -62,7 +62,7 @@
     _navView.userInteractionEnabled = YES;
     
     // 默认tag 99;
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake( 0, (_navView.height - 40)/2, _navView.width, 40)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake( 0, (_navView.height - 40)/2, kMScreen_W - 44 * 2, 40)];
     titleLabel.tag = 99;
     [titleLabel setText:szTitle];
     [titleLabel setTextAlignment:NSTextAlignmentCenter];
