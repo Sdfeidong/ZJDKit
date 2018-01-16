@@ -12,7 +12,7 @@
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 #import "YYKit.h"
 #import "MJExtension.h"
 

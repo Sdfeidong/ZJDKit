@@ -11,7 +11,6 @@
 #endif
 
 #import "BasicViewController.h"
-#import "ZJD_Header.h"
 #import "ZJD_Macros.h"
 #import "MBProgressHUD+Additions.h"
 #import "NSDate+Utils.h"
@@ -43,6 +42,8 @@
 #import "ZJDLaunchAd.h"
 #import "ZJDLaunchViewController.h"
 #import "ZJDWebViewController.h"
+#import "ZJDKeyChain.h"
+#import "ZJDKeyChainDataManager.h"
 #import "ZJD_FileManager.h"
 #import "ZJD_FileManageUnit.h"
 #import "ZJD_Networking.h"
@@ -63,6 +64,7 @@
 #import "ZJD_PopoverView.h"
 #import "ZJD_StarEvaluateView.h"
 #import "ZJD_TableView.h"
+#import "ZJDKit.h"
 
 FOUNDATION_EXPORT double ZJDKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZJDKitVersionString[];

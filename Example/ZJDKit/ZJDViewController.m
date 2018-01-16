@@ -11,6 +11,8 @@
 #import "ZJD_Macros.h"
 #import "ZJDWebViewController.h"
 
+#import "ZJDTestViewController.h"
+
 @interface ZJDViewController ()
 
 @end
@@ -22,21 +24,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // ...btn
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 60)];
-    btn.backgroundColor = RANDCOLOR;
-    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    [self zjdTest];
+}
+// 各种方法测试
+- (void)zjdTest {
     
     NSLog(@"%@",[NSDate getCurrentDateTimestamp13]);
-}
-
-- (void)btnAction {
-    
-    [ZJDWebViewController jumpWebviewWith:@"http://live.polyv.cn/watch/145836" superVC:self navColor:RANDCOLOR navTitle:@"直播间" backAction:^{
-        
-    }];
+    NSLog(@"%@",[ZJDKeyChainDataManager readUUID]);
 }
 
 - (void)didReceiveMemoryWarning

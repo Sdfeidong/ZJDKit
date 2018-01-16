@@ -7,7 +7,7 @@
 //
 
 #import "ZJD_FileManageUnit.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 
 // 已在PrefixHeader.pch 定义过
 //#define NFM_DM [NSFileManager defaultManager]

@@ -8,7 +8,7 @@
 
 #import "ZJD_StarEvaluateView.h"
 #import "UIView+Extension.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 
 @interface ZJD_StarEvaluateView (){
     

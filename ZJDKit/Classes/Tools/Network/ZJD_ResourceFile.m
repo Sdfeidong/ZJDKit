@@ -7,7 +7,7 @@
 //
 
 #import "ZJD_ResourceFile.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 
 @implementation ZJD_ResourceFile
 

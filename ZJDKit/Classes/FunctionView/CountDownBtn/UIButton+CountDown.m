@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+CountDown.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 
 @implementation  UIButton (CountDown)
 

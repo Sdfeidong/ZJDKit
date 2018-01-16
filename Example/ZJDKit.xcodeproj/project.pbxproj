@@ -17,11 +17,11 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7A6D5B7A612A61D5DBA86063 /* Pods_ZJDKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A3BEDCFA96A92A0265859F /* Pods_ZJDKit_Example.framework */; };
+		D6435351200D949800D936FB /* ZJDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6435350200D949800D936FB /* ZJDTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		098C18CECF5C140ACBA9B861 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		22EE1CD0A8731CDB45B98D93 /* Pods-ZJDKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJDKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJDKit_Tests/Pods-ZJDKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		30EBFF7F28278903E6FAB73B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		472044F21FA3B72B465773A5 /* Pods-ZJDKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJDKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJDKit_Example/Pods-ZJDKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		54A3BEDCFA96A92A0265859F /* Pods_ZJDKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJDKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,8 +42,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7319102AF3F54F8EF27CA823 /* ZJDKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZJDKit.podspec; path = ../ZJDKit.podspec; sourceTree = "<group>"; };
 		871F02F15E418ED23A1CDFBE /* Pods_ZJDKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJDKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A48E0876480DEE25D01C690A /* Pods-ZJDKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJDKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJDKit_Tests/Pods-ZJDKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D3101359D222A2985724A900 /* Pods-ZJDKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJDKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJDKit_Example/Pods-ZJDKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D643534F200D949800D936FB /* ZJDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDTestViewController.h; sourceTree = "<group>"; };
+		D6435350200D949800D936FB /* ZJDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +67,6 @@
 			children = (
 				472044F21FA3B72B465773A5 /* Pods-ZJDKit_Example.debug.xcconfig */,
 				D3101359D222A2985724A900 /* Pods-ZJDKit_Example.release.xcconfig */,
-				22EE1CD0A8731CDB45B98D93 /* Pods-ZJDKit_Tests.debug.xcconfig */,
-				A48E0876480DEE25D01C690A /* Pods-ZJDKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -111,6 +110,8 @@
 				6003F59D195388D20070C39A /* ZJDAppDelegate.m */,
 				6003F5A5195388D20070C39A /* ZJDViewController.h */,
 				6003F5A6195388D20070C39A /* ZJDViewController.m */,
+				D643534F200D949800D936FB /* ZJDTestViewController.h */,
+				D6435350200D949800D936FB /* ZJDTestViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -263,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* ZJDAppDelegate.m in Sources */,
+				D6435351200D949800D936FB /* ZJDTestViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* ZJDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

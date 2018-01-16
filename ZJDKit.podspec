@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJDKit'
-  s.version          = '0.7.4'
+  s.version          = '0.7.7'
   s.summary          = '代码积累'
 
 # This description is used to generate tags and improve search results.

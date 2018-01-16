@@ -9,7 +9,7 @@
 #import "RegularBusinessTools.h"
 
 #import "STAlertView.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 #import "YYKit.h"
 
 NSString *const NotificationID = @"RemindUser";

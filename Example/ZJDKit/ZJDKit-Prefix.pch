@@ -12,7 +12,7 @@
 
 #ifdef __OBJC__
 
-    #import "ZJD_Header.h"
+    #import "ZJDKit.h"
 
 #endif
 

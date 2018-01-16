@@ -7,7 +7,7 @@
 //
 
 #import "UIImageView+ZJDAdd.h"
-#import "ZJD_Header.h"
+#import "ZJDKit.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
