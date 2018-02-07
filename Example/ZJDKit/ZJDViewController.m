@@ -29,6 +29,7 @@
 // 各种方法测试
 - (void)zjdTest {
     
+    NSLog(@"哈哈、测试啦");
     NSLog(@"%@",[NSDate getCurrentDateTimestamp13]);
     NSLog(@"%@",[ZJDKeyChainDataManager readUUID]);
 }
