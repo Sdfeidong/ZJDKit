@@ -11,6 +11,7 @@
 #endif
 
 #import "BAButton.h"
+#import "BAButton_Version.h"
 #import "BAKit_ConfigurationDefine.h"
 #import "UIButton+BACountDown.h"
 #import "UIButton+BAKit.h"

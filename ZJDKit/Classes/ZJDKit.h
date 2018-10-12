@@ -43,6 +43,7 @@
 #import "UIImageView+toBig.h"
 #import "UIImageView+ZJDAdd.h"
 #import "UILabel+EdgeInsert.h"
+#import "UILabel+SetLabelSpace.h"
 #import "UIViewController+ZJDAdd.h"
 
 // 获取手机UUID 唯一

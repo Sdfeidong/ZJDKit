@@ -507,21 +507,5 @@ description:__VA_ARGS__];\
 
 /** *****************************************  **/
 
-/** ************* 微信支付 **************  **/
-#pragma mark - 微信支付需要配置的参数
-
-// 开放平台登录https://open.weixin.qq.com的开发者中心获取APPID
-#define WX_APPID @"wx85a724007b6d3379"
-// 开放平台登录https://open.weixin.qq.com的开发者中心获取AppSecret。
-#define WX_APPSecret @"9d897b3b0a93312a680fc4f466cdddfc"
-// 微信支付商户号
-#define WX_MCH_ID  @"1319180601"
-// 安全校验码（MD5）密钥，商户平台登录账户和密码登录http://pay.weixin.qq.com
-// 平台设置的“API密钥”，为了安全，请设置为以数字和字母组成的32字符串。
-#define WX_PartnerKey @"yuxiangxin821bzjmzljykjyxgs66888"
-#define WX_Notify_url @"http://yyk100.com"
-#define WX_Trade_type @"APP"
-/** ************* 微信支付 **************  **/
-
 #endif
 

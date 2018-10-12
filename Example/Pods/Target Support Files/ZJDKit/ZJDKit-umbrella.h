@@ -23,6 +23,7 @@
 #import "UIImageView+toBig.h"
 #import "UIImageView+ZJDAdd.h"
 #import "UILabel+EdgeInsert.h"
+#import "UILabel+SetLabelSpace.h"
 #import "UINavigationBar+Other.h"
 #import "UITableView+ZJDAdd.h"
 #import "UITableViewCell+ZJDAdd.h"

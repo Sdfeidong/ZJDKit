@@ -1,3 +1,4 @@
+platform :ios, '8.0'
 use_frameworks!
 
 # 忽略引入的第三方警告
